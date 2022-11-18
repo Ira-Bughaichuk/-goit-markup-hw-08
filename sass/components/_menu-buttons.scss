@@ -1,0 +1,29 @@
+.menu-container{
+
+    &__button{
+        min-height: 40px;
+        min-width: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        color:$title-color;
+
+        &:hover,
+        &:focus {
+                background-color: $accent-color;
+        }
+
+        @media screen and (max-width:767px){
+            display: block;
+        }
+    }
+
+}
