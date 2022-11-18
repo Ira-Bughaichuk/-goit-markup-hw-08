@@ -350,9 +350,24 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .btns-list, .portfolio-card, .address, .clients-list, .social, .team-list, .work-list, .features, .contact, .navigation__list {
@@ -365,6 +380,16 @@ body {
 
 /*header logo*/
 .page-header {
+  min-height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   border-bottom: 1px solid #ECECEC;
 }
 .page-header__block {
@@ -389,12 +414,15 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding: 16px 0;
   }
 }
 
 .logo {
   color: #2196F3;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
