@@ -380,16 +380,6 @@ body {
 
 /*header logo*/
 .page-header {
-  min-height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   border-bottom: 1px solid #ECECEC;
 }
 .page-header__block {
@@ -416,6 +406,16 @@ body {
             justify-content: space-between;
     padding: 16px 0;
   }
+}
+
+.page-header .container {
+  min-height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
 }
 
 .logo {
@@ -615,8 +615,21 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 30px;
   padding: 5px;
+}
+@media screen and (max-width: 479px) {
+  .features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .features__card { /*features__card*/
   /* виставити svg*/

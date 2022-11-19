@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header all-hidden">
       <div class="container">
         <div class="page-header__block">
           <a href="./index.html" class="logo page-header__logo" lang="en">
@@ -57,26 +57,18 @@
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
-          <svg class="icon" width="40" height="40">
+          <svg class="" width="40" height="40">
             <use xlink:href="./images/sprite.svg#icon-burger"></use>
           </svg>
         </button>
 
         <div class="menu-container js-menu-container" id="mobile-menu">
           <button class="menu-container__button js-close-menu">
-            <svg class="icon" width="40" height="40">
+            <svg class="" width="40" height="40">
               <use xlink:href="./images/sprite.svg#icon-cross"></use>
             </svg>
           </button>
-          <ul class="mobile-menu">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
+          <ul class="mobile-menu"></ul>
         </div>
       </div>
     </header>
@@ -91,11 +83,11 @@
         </div>
       </section>
       <!--Переваги features-->
-      <section class="section all-hidden">
+      <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Переваги</h2>
           <ul class="features">
-            <li>
+            <li class="features__item">
               <div class="features__card">
                 <svg class="icon" width="70" height="70">
                   <use xlink:href="./images/sprite.svg#icon-antenna"></use>
@@ -106,7 +98,7 @@
                 Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
               </p>
             </li>
-            <li>
+            <li class="features__item">
               <div class="features__card">
                 <svg class="icon" width="70" height="70">
                   <use xlink:href="./images/sprite.svg#icon-clock"></use>
@@ -117,7 +109,7 @@
                 Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
               </p>
             </li>
-            <li>
+            <li class="features__item">
               <div class="features__card">
                 <svg class="icon" width="70" height="70">
                   <use xlink:href="./images/sprite.svg#icon-diagram"></use>
@@ -128,7 +120,7 @@
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li>
+            <li class="features__item">
               <div class="features__card">
                 <svg class="icon" width="70" height="70">
                   <use xlink:href="./images/sprite.svg#icon-astronaut"></use>
@@ -714,7 +706,7 @@
       </div>
     </div>
 
-    <script src="./js/menu.js"></script>
+    <!--<script src="./js/menu.js"></script>-->
     <script src="./js/modal.js"></script>
   </body>
 </html>
