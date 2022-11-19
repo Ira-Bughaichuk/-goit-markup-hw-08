@@ -1,12 +1,30 @@
 .page-footer {
     padding: 60px 0;
     background-color: $footer-color;
+   
 
     &__box {
-            display: flex;
-            list-style: none;
-            align-items: baseline;
-            /*зробити рівно до лого- рівняє по лінії текстового вмісту*/
+        display: flex;
+        list-style: none;
+        align-items: baseline;
+        /*зробити рівно до лого- рівняє по лінії текстового вмісту*/
+
+        @media screen and (max-width:767px) {
+            gap: 60px;
+        }
+
+        @media screen and (max-width:1199px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;              
+        }
+
+        &:not(:last-child) {
+            @media screen and (min-width:768px) and (max-width:1200px) {
+                gap: 20px;
+            }
+        } 
     }
 
     &__logo {/*footer__box__location*/
@@ -20,13 +38,19 @@
     
 }
 
-
+.box__location{
+  @media screen and (min-width:767px) and (max-width:1199px) {        
+        flex-basis: calc(50% - 30px);
+    }
+}
 .address {
     @extend %list-none;
 
     &__item:not(:last-child) {
         margin-bottom: 9px;
+        
     }
+   
 
     &__link {
         font-style: normal;
@@ -52,7 +76,14 @@
 /*footer__box__social*/
 
 .box__social{/*social*/
-    margin-left: 70px;
+
+    @media screen and (min-width:767px) and (max-width:1199px) {
+        flex-basis: calc(50% - 30px);
+    }
+    
+    @media screen and (min-width:1200px){
+        margin-left: 70px;
+    }
 }
 
 .slogan{
@@ -61,23 +92,23 @@
     text-transform: uppercase;
     color: $primary-text-color;
 
-    &__social:not(:last-child){
-            margin-bottom: 20px;
-    }
-    
+    &__social{
+        &:not(:last-child) {
+                margin-bottom: 20px;
+        }
+    }   
 }
-/*.social__link{
-    color: $primary-text-color ;
-}*/
-
-
 
 
 /*footer__box__sending*/
 .box__sending {
-    margin-left: auto;
     max-width: 570px;
     width: 100%;
+
+    @media screen and (min-width:1200px) {
+            margin-left: auto;
+    }
+    
 }
 
 .slogan__sending {
@@ -89,17 +120,30 @@
 
 .form {
     display: flex;
-    gap: 10px;
     width: 100%;
     align-items: center;
+
+    @media screen and (max-width:1199px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    @media screen and (min-width:1200px) {
+            column-gap: 10px;
+    }
 
     &__mail {
         /*email*/
         /*щоб розтягнути на ширину в макеті*/
         display: block;
         width: 100%;
-        max-width: 358px;
-    
+        max-width: 450px;
+
+        @media screen and (min-width:1200px) {
+                max-width: 358px;
+            }
         &::placeholder {
             /*form__mail: :placeholder*/
             font-size: 16px;
@@ -117,6 +161,8 @@
         outline: none;
         width: 100%;
         color: $primary-text-color;
+
+       
     }
 
     &__button {

@@ -4,6 +4,10 @@
     &__title {
             margin-bottom: 50px;
     }
+
+   @media screen and (max-width:1200px){
+    display: none;
+   } 
 } 
 
 

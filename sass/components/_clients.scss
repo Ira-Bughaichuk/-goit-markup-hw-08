@@ -1,4 +1,7 @@
 .clients {
+    display: flex;
+        justify-content: center;
+        align-items: center;
 
     &__title {
             margin-bottom: 50px;
@@ -14,14 +17,16 @@
         gap: 30px;
     
     &__item{
-        @media screen and (max-width:767px) {
-                flex-basis: calc((100% - 60px) /2);
+      
+
+        @media screen and (min-width:480px) {
+                flex-basis: calc((100% - 30px) /2);
         }
         @media screen and (min-width:768px){
-            flex-basis: calc((100% - 90px) /3);
+            flex-basis: calc((100% - 60px) /3);
         }
-        @media screen and (min-width:1199px) {
-            flex-basis: calc((100% - 180px) /6);
+        @media screen and (min-width:1200px) {
+            flex-basis: calc((100% - 150px) /6);
         }
     }    
     &__link {
