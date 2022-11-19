@@ -8,17 +8,29 @@
 .clients-list {
         @extend %list-none;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
-        column-gap: 30px;
+        gap: 30px;
     
-
+    &__item{
+        @media screen and (max-width:767px) {
+                flex-basis: calc((100% - 60px) /2);
+        }
+        @media screen and (min-width:768px){
+            flex-basis: calc((100% - 90px) /3);
+        }
+        @media screen and (min-width:1199px) {
+            flex-basis: calc((100% - 180px) /6);
+        }
+    }    
     &__link {
         display: flex;
         text-decoration: none;
     
         /* стилі вішаємо на силку !!!*/
         color: $client-icon-color;
-        width: 170px;
+        width: 100%; /*170px*/
         height: 92px;
         align-items: center;
         justify-content: center;
