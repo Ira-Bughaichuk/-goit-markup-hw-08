@@ -1,7 +1,8 @@
 .social {
     @extend %list-none;
     display: flex;
-    width: 206px;
+    /*width: 206px;*/
+    justify-content: center;
     height: 44px;
     column-gap: 10px;
 
