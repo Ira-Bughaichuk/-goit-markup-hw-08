@@ -9,15 +9,20 @@
         align-items: baseline;
         /*зробити рівно до лого- рівняє по лінії текстового вмісту*/
 
-        @media screen and (max-width:767px) {
+        @media screen and (max-width:768px) {
             gap: 60px;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
         }
 
-        @media screen and (max-width:1199px) {
+        @media screen and (max-width:1199px){
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            text-align: center;              
+            text-align: center;
+            gap:60px;
         }
 
         &:not(:last-child) {
@@ -39,8 +44,8 @@
 }
 
 .box__location{
-  @media screen and (min-width:767px) and (max-width:1199px) {        
-        flex-basis: calc(50% - 30px);
+@media screen and (min-width:767px) and (max-width:1199px) {
+        flex: 0 0 calc(50% - 30px);
     }
 }
 .address {
@@ -76,10 +81,10 @@
 /*footer__box__social*/
 
 .box__social{/*social*/
-
+    
     @media screen and (min-width:767px) and (max-width:1199px) {
-        flex-basis: calc(50% - 30px);
-    }
+        flex: 0 0 calc(50% -30px);
+        }
     
     @media screen and (min-width:1200px){
         margin-left: 70px;
@@ -123,15 +128,15 @@
     width: 100%;
     align-items: center;
 
-    @media screen and (max-width:1199px) {
+    @media screen and (max-width:769px) {/*(max-width:1199px*/
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        row-gap: 20px;
+        gap: 20px;
     }
 
     @media screen and (min-width:1200px) {
-            column-gap: 10px;
+            gap: 10px;
     }
 
     &__mail {
