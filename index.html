@@ -18,7 +18,7 @@
           <a href="./index.html" class="logo page-header__logo" lang="en">
             Web<span class="logo__part">Studio</span>
           </a>
-          <div class="menu" data-menu id="menu-controls"></div>
+
           <nav class="navigation page-header__navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
@@ -50,25 +50,93 @@
               </a>
             </li>
           </ul>
-        </div>
-        <!--menu-->
-        <button
-          class="menu-container__button js-open-menu all-hidden"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg class="all-hidden" width="40" height="40">
-            <use xlink:href="./images/sprite.svg#icon-burger"></use>
-          </svg>
-        </button>
 
-        <div class="menu-container js-menu-container all-hidden" id="mobile-menu">
-          <button class="menu-container__button js-close-menu">
-            <svg class="" width="40" height="40">
-              <use xlink:href="./images/sprite.svg#icon-cross"></use>
+          <!--menu-->
+          <button
+            type="button"
+            class="page-header__button mobile-menu__button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg width="40" height="40" aria-label="Переключатель мобільного меню">
+              <use class="icon icon-cross" href="../images/sprite.svg#icon-cross"></use>
+              <use class="icon icon-burger" href="./images/sprite.svg#icon-burger"></use>
             </svg>
           </button>
-          <ul class="mobile-menu"></ul>
+        </div>
+        <div class="mobile-menu" id="menu-container" data-menu>
+          <div class="mobile-nav mobile-menu__navigation">
+            <ul class="mobile-nav__list">
+              <li class="mobile-nav__item">
+                <a href="./index.html" class="mobile-nav__link">Студія</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a href="./portfolio.html" class="mobile-nav__link">Портфоліо</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a href="" class="mobile-nav__link">Контакти</a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="mobile-contact mobile-menu__contacts">
+            <li class="mobile-contact__item">
+              <a class="mobile-contact__link mobile-contact__link--email" href="tel:+380961111111">
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="mobile-contact__item">
+              <a
+                class="mobile-contact__link mobile-contact__link--number"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mobile-socials mobile-menu__socials">
+            <li>
+              <a
+                class="mobile-socials__link"
+                href="#"
+                target="_blank"
+                aria-label="Instagram"
+                rel="noreferrer noopener"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-socials__link"
+                href="#"
+                target="_blank"
+                aria-label="twitter"
+                rel="noreferrer noopener"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-socials__link"
+                href="#"
+                target="_blank"
+                aria-label="Facebookr"
+                rel="noreferrer noopener"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-socials__link"
+                href="#"
+                target="_blank"
+                aria-label="LinkedIn"
+                rel="noreferrer noopener"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -135,7 +203,7 @@
         </div>
       </section>
       <!--Чим ми займаємося-->
-      <section class="section work all-hidden">
+      <section class="section work">
         <div class="container">
           <h2 class="section__title work__title">Чим ми займаємося</h2>
           <ul class="work-list">
@@ -193,7 +261,7 @@
         </div>
       </section>
       <!--Наша команда-->
-      <section class="section team all-hidden">
+      <section class="section team">
         <div class="container">
           <h2 class="section__title team__title">Наша команда</h2>
           <ul class="team-list">
@@ -517,7 +585,7 @@
           </ul>
         </div>
       </section>
-      <section class="section all-hidden">
+      <section class="section">
         <div class="container">
           <h2 class="section__title clients__title">Постійні клієнти</h2>
           <ul class="clients-list">
@@ -603,7 +671,7 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer all-hidden">
+    <footer class="page-footer">
       <div class="container">
         <div class="box page-footer__box">
           <div class="box__location">
@@ -710,7 +778,7 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden all-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="backdrop__modal">
         <button class="close-modal" type="button" data-modal-close>
           <svg class="icon close-modal__icon" width="18" height="18">
@@ -775,7 +843,7 @@
       </div>
     </div>
 
-    <!--<script src="./js/menu.js"></script>-->
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

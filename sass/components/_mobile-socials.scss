@@ -1,0 +1,23 @@
+.mobile-socials{
+    @extend %list-none;
+        display: flex;
+        flex-wrap: wrap;
+       gap: 10px;
+        
+    &__link {
+        @extend %link-none;
+        color: $accent-color;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        
+      
+        &::after {
+            content: '';
+            border-right: 1px solid $border-modal-input-color;
+            padding-left: 10px;
+        }
+          
+    }
+
+}
