@@ -1,31 +1,29 @@
 
 /*header logo*/
 .page-header {
-   
-    
-     
     border-bottom: 1px solid $header-border-color;
-    
+
     &__block {
         display: flex;
         align-items: center;
     }
 
     &__logo {
-        margin-right: 92px;   
+        margin-right: 92px;
     }
 
     &__contact {
         margin-left: auto;
     }
+}
 
-    @media screen and (max-width:767px){
+   /* @media screen and (max-width:767px){
         display: flex;
         justify-content: space-between;
         padding: 16px 0;
-    }
-}
-.page-header .container {
+    }*/
+
+/*.page-header .container {
     min-height: 80px;
     display: flex;
    justify-content: space-between;

@@ -53,16 +53,16 @@
         </div>
         <!--menu-->
         <button
-          class="menu-container__button js-open-menu"
+          class="menu-container__button js-open-menu all-hidden"
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
-          <svg class="" width="40" height="40">
+          <svg class="all-hidden" width="40" height="40">
             <use xlink:href="./images/sprite.svg#icon-burger"></use>
           </svg>
         </button>
 
-        <div class="menu-container js-menu-container" id="mobile-menu">
+        <div class="menu-container js-menu-container all-hidden" id="mobile-menu">
           <button class="menu-container__button js-close-menu">
             <svg class="" width="40" height="40">
               <use xlink:href="./images/sprite.svg#icon-cross"></use>
@@ -74,7 +74,7 @@
     </header>
     <main>
       <!-- Герой -->
-      <section class="hero all-hidden">
+      <section class="hero">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button class="button hero__button" type="submit" data-modal-open>
@@ -83,7 +83,7 @@
         </div>
       </section>
       <!--Переваги features-->
-      <section class="section all-hidden">
+      <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Переваги</h2>
           <ul class="features">
@@ -193,7 +193,7 @@
         </div>
       </section>
       <!--Наша команда-->
-      <section class="section team all-hidden ">
+      <section class="section team all-hidden">
         <div class="container">
           <h2 class="section__title team__title">Наша команда</h2>
           <ul class="team-list">
@@ -215,7 +215,6 @@
                   class="image team-list__image"
                   src="./images/team1-tablet.jpg"
                   alt="Фото Ігора Дем'яненка"
-                 
                 />
               </picture>
               <div class="team-list__meta">
@@ -295,7 +294,6 @@
                   class="image team-list__image"
                   src="./images/team2-tablet.jpg"
                   alt="Фото Ігора Дем'яненка"
-                 
                 />
               </picture>
               <div class="meta team-list__meta">
@@ -375,7 +373,6 @@
                   class="image team-card__image"
                   src="./images/team3-tablet.jpg"
                   alt="Фото Ігора Дем'яненка"
-                 
                 />
               </picture>
               <div class="meta team-list__meta">
@@ -451,12 +448,13 @@
                   srcset="./images/team4-desctop.jpg 1x, ./images/team4-desctop.jpg 1x"
                   media="(min-width: 1200px)"
                 />
-              <img
-                class="image team-list__image"
-                src="./images/team4-tablet.jpg"
-                alt="Фото Ігора Дем'яненка"
-               
-              />
+                <img
+                  class="image team-list__image"
+                  src="./images/team4-tablet.jpg"
+                  alt="Фото Ігора
+                Дем'яненка"
+                />
+              </picture>
               <div class="meta team-list__meta">
                 <h3 class="name team-list__name">Михайло Єрмаков</h3>
                 <p class="speciality team-list__speciality">UI Designer</p>

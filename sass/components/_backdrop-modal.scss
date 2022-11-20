@@ -12,36 +12,63 @@
     transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
         opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    /*for mobile*/
+    @media screen and (max-width: 767px){
+        padding: 93px 15px;
+        overflow-y: scroll;
+        margin: 0 auto;
+    }
+    
 
     &__modal {
-        position: absolute;
-        display: block;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(0deg);
-        /* анмація при викиду модалки*/
-        /*rotate(0deg) - початковий стан модалки, тобто перед transition*/
-        padding: 40px;
-        
-        max-width: 528px;
-        max-height: 581px;
-        width: 100%;
-        height: 100%;
+       
         padding: 40px;
     
+
         background-color: $primary-background-color;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 4px;
-        
+
+        transform: rotate(0deg);
+        /* анмація при викиду модалки*/
+        /*rotate(0deg) - початковий стан модалки, тобто перед transition*/
+       
         /*анмація при викиду модалки*/
          transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
         
+         @media screen and (min-width:480px) { /*for mobile*/
+            /*щоб зафіксувати розмір */
+                max-width: 452px;
+                width: 100%;
+                /*calc(100% - 80px)*/
+                display: block;
+                margin: 0 auto;
+        }
+
+        @media screen and (min-width:768px) {
+        position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+            /* анмація при викиду модалки*/
+            /*rotate(0deg) - початковий стан модалки, тобто перед transition*/
+            max-width: 528px;
+            max-height: 581px;
+            width: 100%;
+            height: 100%;
+        
+        }
+        
         &.is-hidden & {/*.backdrop.is-hidden backdrop__modal */
                     transform: translate(-50%, -50%) rotate(-180deg);
-                }
-        
-            }
-
+        }
+    
+    }
+    
+    .is-hidden{
+        display: none;
+    }
 }
 
 
