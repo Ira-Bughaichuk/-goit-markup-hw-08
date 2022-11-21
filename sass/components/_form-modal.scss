@@ -105,19 +105,22 @@
             line-height: 1.71;
             
         }
-        /*position center for label*/
-        display: flex;
-        justify-content: center;
-      
+        
+        
         width: 100%;
-    
-        gap: 7px;
         align-items: center;
         font-size: 12px;
         line-height: 1.1666;
         
         color: $secondary-text-color;
         cursor: pointer;
+
+        @media screen and (min-width:480px){
+            /*position center for label*/
+            gap: 7px;
+            display: flex;
+            justify-content: center;
+        }
     }
     &__input {
         -webkit-appearence: none;

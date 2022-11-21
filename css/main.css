@@ -290,7 +290,12 @@ p {
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }
 
 .section__title {
@@ -560,6 +565,11 @@ body.lock {
 .contact__link:hover, .contact__link:focus, .contact__link:hover .icon, .contact__link:focus .icon {
   color: #2196F3;
 }
+@media screen and (max-width: 1199px) {
+  .contact__link {
+    font-size: 12px;
+  }
+}
 .contact__icon {
   display: inline-block;
   margin-right: 10px;
@@ -588,15 +598,11 @@ body.lock {
 }
 @media screen and (max-width: 767px) {
   .mobile-menu {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-  }
-  .mobile-menu.is-open {
-    display: block;
   }
 }
 .mobile-menu__navigation {
@@ -958,7 +964,12 @@ body.lock {
   padding-top: 0;
 }
 .work__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .work__title {
+    margin-bottom: 50px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .work {
@@ -1136,7 +1147,12 @@ body.lock {
           align-items: center;
 }
 .clients__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    margin-bottom: 50px;
+  }
 }
 
 .clients-list {
@@ -1212,7 +1228,7 @@ body.lock {
           align-items: baseline;
   /*зробити рівно до лого- рівняє по лінії текстового вмісту*/
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .page-footer__box {
     gap: 60px;
     -webkit-box-orient: vertical;
@@ -1228,7 +1244,7 @@ body.lock {
             align-items: center;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .page-footer__box {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1239,7 +1255,7 @@ body.lock {
     gap: 60px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .page-footer__box:not(:last-child) {
     gap: 20px;
   }
@@ -1701,10 +1717,15 @@ body.lock {
 .close-modal__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: #000000;
   margin-bottom: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .close-modal__title {
+    line-height: 1.15;
+  }
 }
 
 .form__modal {
@@ -1822,15 +1843,7 @@ body.lock {
   margin-bottom: 33px;
 }
 .group-checkbox__label {
-  /*position center for label*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 100%;
-  gap: 7px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1843,6 +1856,18 @@ body.lock {
   .group-checkbox__label {
     font-size: 14px;
     line-height: 1.71;
+  }
+}
+@media screen and (min-width: 480px) {
+  .group-checkbox__label {
+    /*position center for label*/
+    gap: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .group-checkbox__input {
