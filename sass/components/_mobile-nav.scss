@@ -1,10 +1,11 @@
 .mobile-nav {
-    display: flex;
-    flex-direction: column;
+   
     
 
     &__list {
         @extend %list-none;
+        display: flex;
+        flex-direction: column;
     }
 
     &__item{

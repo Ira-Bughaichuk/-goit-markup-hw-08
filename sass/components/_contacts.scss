@@ -6,25 +6,29 @@
     flex-wrap: wrap;
     align-items: baseline;
 
-    @media screen and (min-width:768px) {    
-            margin-left: auto;
-        }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        flex-direction: column;
     
-        @media screen and (min-width:1200px) {
-            justify-content: center;
+        &:not(:last-child) {
+                gap: 10px;
         }
+    }
+
+    @media screen and (min-width:1200px) {
+        justify-content: center;
+        margin-left: auto;
+
+            &:not(:last-child) {
+                    gap: 30px;
+            }
+    }
+        
 
     &__item{
-        @media screen and (min-width:768px) {
-        &:not(:last-child) {
-                margin-bottom: 10px;
-            }
+    @media screen and (min-width:1200px) {
+            justify-content: center;
         }
-        @media screen and (min-width:1200px){
-            &:not(:last-child){
-               margin-right: 30px;
-            }
-        }
+       
     }
    
     &__link {
