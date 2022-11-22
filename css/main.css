@@ -301,9 +301,14 @@ p {
 .section__title {
   color: #212121;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+  }
 }
 
 .icon {
@@ -874,6 +879,11 @@ body.lock {
   line-height: 1.14;
   text-transform: uppercase;
   color: #212121;
+}
+@media screen and (max-width: 767px) {
+  .features__label {
+    text-align: center;
+  }
 }
 .features__label:not(:last-child) {
   margin-bottom: 10px;
@@ -1568,7 +1578,17 @@ body.lock {
   -webkit-column-gap: 8px;
      -moz-column-gap: 8px;
           column-gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .btns-list {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btns-list {
+    margin-bottom: 50px;
+  }
 }
 @media screen and (max-width: 767px) {
   .btns-list {
